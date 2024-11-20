@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa Romeo Giulietta</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+        /* Styling für die Seite */
+        body {
+            font-family: Poppins;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+        }
+
+        /* Styling für die Navigationsleiste */
+        .navbar {
+            max-width: 100%;
+            height: 50px;
+            text-align: center;
+            align-items: center;
+            position: relative;
+            z-index: 100;
+        }
+
+        .navbar a {
+            color: #f1683a;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: 550;
+            font-size: x-large;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        /* Container für die Galerie */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Styling der Bilder in der Galerie */
+        .gallery img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Vergrößertes Bild */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        /* Schließen des vergrößerten Bildes */
+        .lightbox:active {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigationsleiste -->
+    <div class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="Ersatzteile.html">Ersatzteile</a>
+        <a href="Service.html">Service</a>
+        <a href="Projekte.html">Projekte</a>
+        <a href="Admin.html">Admin</a>
+    </div>
+
+    <!-- Titel der Seite -->
+    <h1 style="text-align: center; margin-top: 20px; color: #ffffff;">Alfa Romeo Giulietta</h1>
+
+
+    <!-- Galerie -->
+    <div class="gallery">
+        <img src="Bilder/Alfa Romeo/Alfa Romeo.jpg" alt="Bild 1" onclick="openLightbox(this)">
+        <img src="Bilder/Alfa Romeo/Alfa Romeo1.jpg" alt="Bild 2" onclick="openLightbox(this)">
+        <img src="Bilder/Alfa Romeo/Alfa Romeo2.jpg" alt="Bild 3" onclick="openLightbox(this)">
+        <img src="Bilder/Alfa Romeo/Alfa Romeo3.jpg" alt="Bild 4" onclick="openLightbox(this)">
+        <img src="Bilder/Alfa Romeo/Alfa Romeo4.jpg" alt="Bild 4" onclick="openLightbox(this)">
+        <img src="Bilder/Alfa Romeo/Alfa Romeo6_1.jpg" alt="Bild 5" onclick="openLightbox(this)">
+        <img src="Bilder/Alfa Romeo/Alfa Romeo7_1.jpg" alt="Bild 6" onclick="openLightbox(this)">
+        <img src="Bilder/Alfa Romeo/Alfa Romeo8.jpg" alt="Bild 7" onclick="openLightbox(this)">
+        <img src="Bilder/Alfa Romeo/Alfa Romeo9.jpg" alt="Bild 8" onclick="openLightbox(this)">
+
+    </div>
+
+    <!-- Lightbox für vergrößerte Bilder -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        function openLightbox(imgElement) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = imgElement.src;
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

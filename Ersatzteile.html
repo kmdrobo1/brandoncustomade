@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ersatzteile</title>
+    <link rel="stylesheet" href="Ersatzteile.css">
+</head>
+<body class="" style="background-image: url('Bilder/Ersatzteile/Ersatzteile.jpg')">
+    <header>
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="Service.html">Service</a>
+            <a href="Projekte.html">Projekte</a>
+            <a href="Admin.html">Admin</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="icon-cart">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+            </svg>
+            <span>0</span>
+        </div>
+
+        <div class="title">Ersatzteile</div>
+
+        <!-- Such- und Filterfelder -->
+        <div class="filter">
+            <input type="text" id="search" placeholder="Produktname..."  style="height: 30px; width: 250px; border-radius: 4px; border: none;">
+            <input type="number" id="min_price" placeholder="Mindestpreis" style="height: 30px; width: 250px; border-radius: 4px; border: none;">
+            <input type="number" id="max_price" placeholder="Höchstpreis" style="height: 30px; width: 250px; border-radius: 4px; border: none;">
+            
+            <!-- Dropdown zur Auswahl der Kategorie -->
+            <select id="category" style="height: 35px; width: 250px; border-radius: 4px; border: none;">
+                <option value="bremse">Bremse</option>
+                <option value="karosserieteile">Karosserie</option>
+                <option value="motor">Motor</option>
+            </select>
+        </div>
+
+        <div class="listProduct">
+            <!-- Produkte werden hier dynamisch eingefügt -->
+        </div>
+    </div>
+
+    <div class="cartTab">
+        <h1>Warenkorb</h1>
+        <div class="listCart">
+            <!-- Warenkorb-Produkte werden hier dynamisch eingefügt -->
+        </div>
+        <div class="totalSum">
+            <h3>Gesamtsumme: <span id="totalAmount">€ 0.00</span></h3>
+        </div>        
+        <div class="btn">
+            <button class="close">SCHLIESSEN</button>
+            <button class="checkOut">KAUFEN</button>
+        </div>
+    </div>
+
+    <script src="Ersatzteile.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "name":" KONSERVIERUNG",
+        "price": 5000,
+        "image": "Bilder/Service/Konservierung.jpg"
+    },
+    {
+        "id": 2,
+        "name":" AUFBEREITUNG",
+        "price": 350,
+        "image": "Bilder/Service/Aufbereitung.jpg"
+    },
+    {
+        "id": 3,
+        "name":" TÜV SERVICE",
+        "price": 52,
+        "image": "Bilder/Service/Tüv.jpg"
+    },
+    {
+        "id": 4,
+        "name":" LACKPFLEGE",
+        "price": 145,
+        "image": "Bilder/Service/Lackpflege.jpg"
+    },
+    {
+        "id": 5,
+        "name":" ÖLSERVICE",
+        "price": 111,
+        "image": "Bilder/Service/Ölservice.jpg"
+    },
+    {
+        "id": 6,
+        "name":" INSPEKTION",
+        "price": 45,
+        "image": "Bilder/Service/Inspektion.jpg"
+    },
+    {
+        "id": 7,
+        "name":" ACHSVERMESSUNG",
+        "price": 225,
+        "image": "Bilder/Service/Achsvermessung.png"
+    },
+    {
+        "id": 8,
+        "name":" RÄDERSERVICE",
+        "price": 45,
+        "image": "Bilder/Service/Räderservice.jpg"
+    },
+    {
+        "id": 9,
+        "name":" KLIMAANLAGENSERVICE",
+        "price": 88,
+        "image": "Bilder/Service/Klimaservice.jpg"
+    },
+    {
+        "id": 10,
+        "name":" MOTOÜBERHOLUNG",
+        "price": 251,
+        "image": "Bilder/Service/Motor2.jpg"
+    },
+    {
+        "id": 11,
+        "name":" LICHTTEST",
+        "price": 27,
+        "image": "Bilder/Service/Lichttest.jpg"
+    },
+    {
+        "id": 12,
+        "name":" WINTERSERVICE",
+        "price": 190,
+        "image": "Bilder/Service/Winterservice.jpg"
+    }
+
+]

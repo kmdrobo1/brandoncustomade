@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+/* Gesamte Seite */
+body {
+    margin: 0;
+    color: #545353;
+    font-family: Poppins;
+    font-size: 22px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigationsleiste */
+header {
+    max-width: 100%;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+/* Text Navigationsleiste */
+header a {
+    color: #f1683a;
+    font-weight: 550;
+    font-size: xx-large;
+    margin-right: 40px;
+}
+
+/* Der Container */
+.container {
+    width: 1200px;
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+}
+
+/* Einkaufswagensymbol */
+svg {
+    width: 50px;
+}
+
+.icon-cart {
+    position: absolute;
+    color: #eee;
+    right: 75px;
+}
+
+.icon-cart span {
+    position: absolute;
+    background-color: #f1683a;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    top: 50%;
+    right: -20px;
+}
+
+/* Karten */
+.title {
+    font-family: Poppins;
+    font-size: 70px;
+    font-weight: bold;
+    color: #f1683a;
+}
+
+.listProduct .item img {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 5px;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+
+.listProduct {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+.listProduct .item {
+    background-color: #EEEEE6;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.listProduct .item h2 {
+    font-weight: 400;
+    font-size: larger;
+}
+
+.listProduct .item .price {
+    letter-spacing: 1px;
+    font-size: small;
+}
+
+.listProduct .item button {
+    background-color: #353432;
+    color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+/* Einstellung Warenkorb */
+.cartTab {
+    width: 550px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    right: -550px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 100px 1fr 80px;
+    transition: .5s;
+}
+
+body.showCart .cartTab {
+    right: 0; /* Warenkorb fährt von rechts ein */
+}
+
+body.showCart .container {
+    transform: translateX(-250px); /* Verschiebt den Container nach links */
+}
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px; /* Schriftgröße anpassen */
+    text-align: center; /* Text zentrieren */
+}
+
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab button{
+    background-color: #E8BC0E;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: large;
+    cursor: pointer;
+    padding: 18px 10px; /* Vertikales Padding erhöhen, um die Höhe zu erhöhen */
+}
+
+.cartTab .close {
+    background-color: #eee;
+}
+
+.listCart {
+    overflow: auto;
+    padding: 20px;
+}
+
+/* Produktdarstellung im Warenkorb */
+.listCart .item img {
+    width: 70%; /* Vergrößerte Breite für Warenkorbbilder */
+}
+.listCart .item {
+    display: grid;
+    grid-template-columns: 100px 150px 120px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    padding: 10px; /* Innenabstand hinzufügen */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Untere Grenze für Abgrenzung */
+}
+.listCart .name {
+    font-weight: 500; /* Fettdruck für Produktnamen */
+    overflow: hidden; /* Überlauf verbergen */
+    text-overflow: ellipsis; /* Überlauf mit Ellipse anzeigen */
+    white-space: nowrap; /* Text in einer Zeile halten */
+}
+.listCart .totalPrice {
+    font-weight: 600; /* Fettdruck für den Gesamtpreis */
+    font-size: 18px; /* Schriftgröße für den Preis anpassen */
+}
+.listCart .quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCart .quantity span {
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    background-color: #eee;
+    border-radius: 60%;
+    color: #555;
+    cursor: pointer;
+    line-height: 40px; /* Vertikale Zentrierung des Textes */
+}
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+    padding: 10px; /* Innenabstand für die Liste hinzufügen */
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+/* Gesamtsumme */
+.totalSum {
+    padding: 10px;
+    text-align: center;
+    background-color: var(--secondary-color); /* Gleiche Hintergrundfarbe wie der Warenkorb */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Obere Grenze für Abgrenzung */
+    color: #fff; /* Weißer Text für bessere Lesbarkeit */
+    font-size: 22px; /* Schriftgröße anpassen, falls gewünscht */
+}
+
+/* Verbesserte mobile Ansicht */
+@media only screen and (max-width: 768px) {
+    .listCart .item {
+        grid-template-columns: 50px 1fr 80px 80px; /* Kleinere Spalten für mobile Ansicht */
+    }
+
+    .cartTab {
+        width: 100%; /* Dehnt das Warenkorb-Panel auf volle Breite aus */
+        right: -100%; /* Ausgangspunkt für Mobilgeräte */
+    }
+
+    body.showCart .container {
+        transform: translateX(-100%); /* Verschiebt den Container bei schmalen Bildschirmen weniger */
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .listProduct {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

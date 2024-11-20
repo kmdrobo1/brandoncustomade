@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Seite</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        body {
+            font-family: Poppins;
+            background-color: #f0f0f0;
+            background-image: url(Bilder/oldtimer-1582375_1920.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px; /* Abstände zwischen den Elementen */
+        }
+        .login-container h2 {
+            text-align: center;
+            color: #333;
+            margin: 0;
+        }
+        .login-container img {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 20px); /* Sorgt für gleichen Abstand links und rechts */
+            padding: 12px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .login-container input[type="submit"] {
+            width: calc(100% - 20px); /* Buttonbreite mit gleichen Rändern */
+            padding: 12px;
+            border: none;
+            margin: 15px 0;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .login-container p {
+            text-align: center;
+            margin-top: 5px;
+        }
+        .login-container a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <a href="Home.html">
+            <img src="Bilder/Logo.jpg" alt="Logo">
+        </a>
+        <h2>Login</h2>
+        <form action="Admin.php" method="post" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <input type="text" name="username" placeholder="Benutzername" required>
+            <input type="password" name="password" placeholder="Passwort" required>
+            <input type="submit" value="Einloggen">
+        </form>
+        <p>Kein Konto? <a href="Registrierung.html">Jetzt registrieren</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="Kontakt.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Formular: Methode auf POST setzen -->
+        <form action="Kontakt.php" method="POST"> 
+      
+          <label for="fname">Vorname</label>
+          <input type="text" id="fname" name="firstname" placeholder="Ihr Vorname..." required>
+      
+          <label for="lname">Nachname</label>
+          <input type="text" id="lname" name="lastname" placeholder="Ihr Nachname..." required>
+      
+          <label for="country">Wohnsitz</label>
+          <select id="country" name="country" required>
+            <option value="deutschland">Deutschland</option>
+            <option value="österreich">Österreich</option>
+            <option value="schweiz">Schweiz</option>
+          </select>
+      
+          <label for="subject">Anliegen</label>
+          <textarea id="subject" name="subject" placeholder="Hier können Sie Ihr Anliegen schildern..." style="height:200px" required></textarea>
+      
+          <input type="submit" value="Absenden">
+      
+        </form>
+      </div>
+</body>
+</html>
